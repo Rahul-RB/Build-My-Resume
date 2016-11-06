@@ -1,0 +1,278 @@
+<html>
+	<head>
+		<title> Winner </title>
+		<link rel="shortcut icon" type="image/png" href="/WT_NEW/pictures/favicon.ico"/>
+		<script type="text/javascript" src="/WT_NEW/html2canvas.js"></script>
+		<script type="text/javascript" src="/WT_NEW/jsPDF/dist/jspdf.min.js"></script>
+		<script type="text/javascript">
+			function genPDF(){
+			
+				html2canvas(document.getElementById('FOR_PDF'),{
+					onrendered: function(canvas){
+						
+						var img = canvas.toDataURL("image/png",1.0);
+						var doc = new jsPDF('p', 'mm',[200,500]);//[200,500]
+						var options = {
+         				pagesplit: true
+    				};
+						doc.addImage(img,'JPEG',-5,-5);
+						doc.save('winner-pdf.pdf');		
+					}
+				});
+			}
+			function print_direct(){
+				var print=document.getElementById("print");
+				var pdf=document.getElementById("pdf");
+				print.style.display="none";
+				pdf.style.display="none";
+				window.print();
+		}
+		</script>
+		<style>
+		/* PAGE STYLING STARTS DON'T TOUCH!*/
+	.TEST{	
+		overflow-wrap:break-word;
+	}
+	body {
+  		background: rgb(204,204,204); 
+	}
+	page {
+	  background: white;
+  	display: block;
+  	margin: 0 auto;
+  	margin-bottom: 0.5cm;
+  	box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+	}
+	page[size="A4"] {  
+  	width: 21cm;
+  	height: 29.7cm; 
+	}
+	page[size="A4"][layout="portrait"] {
+  	width: 29.7cm;
+  	height: 21cm;  
+	}	
+	@media print {
+  	body, page {
+  	  margin: 0;
+  	  box-shadow: 0;
+  	}
+	}
+	/*PAGE STYLING ENDS*/
+	
+	hr.style2 {
+		border-top: 3px dashed #0f98c1;
+		width:300px;
+		background-color:#FFFFFF;
+		text-align:left;
+		margin-left:40px;
+	}
+	hr.style2_rest{
+		border-top: 3px dashed #0f98c1;
+		width:300px;
+		background-color:#FFFFFF;
+		text-align:left;
+		margin-left:0px;
+	}
+	.container{
+		padding-left:40px;
+		padding-right:40px;
+	}
+	.skills{
+    display: -webkit-flex;
+    display: flex;
+    width: 710px;
+    height: 150px;
+	}
+	
+	.l1{
+    width: 300px;
+    height: 100px;
+    margin:10px;
+	}
+	#main{
+		padding-left:40px;
+		color:#0f98c1;
+		font-size:32px;
+		font-family:"Trebuchet MS";
+		text-align:left;
+	}
+	#navcontainer ul{
+		margin: 0;
+		padding: 0;
+		padding-left:40px;
+		font-size:18px;
+		text-align:left;
+		list-style-type: none;
+	}
+	#navcontainer ul li { 
+		display: inline;
+	}
+	#work_exp{
+		font-family:'Trebuchet MS';
+		font-size:18px;
+		margin-top:-80px;
+	}
+	#work_exp_main{
+		margin-top:-70px;
+	}
+	#education{
+		font-family:'Trebuchet MS';
+		font-size:18px;
+	}/*
+	#e2{
+		margin-top:-20px;
+	}
+	#e3{
+		margin-top:30px;
+	}*/
+		</style>
+	</head>
+	
+	<body>
+
+		<input type="button" onclick="javascript:genPDF()" value="GET INACCURATE PDF"id="pdf">  
+  <input type="button" onclick="print_direct()" value="PRINT PAGE!" id="print"/>
+<page size="A4">
+<div id="FOR_PDF">
+	
+	<br>
+	<br>
+		<div id="main">
+		</div>
+			
+		<hr class="style2">
+	
+		<div id="navcontainer">
+			<ul id="list">|
+				<li id="l1"></li>
+				<li id="l2"></li> | 
+				<li id="l3"></li> | 
+				<li id="l4"></li> | 
+			</ul>
+		</div>
+		<br>
+		<br>
+	
+	<div class="container">
+		
+		<span style="font-size:22px; font-family:'Trebuchet MS';font-weight:900;color:#0f98c1;"> SKILLS </span>
+		<hr class="style2_rest">
+	
+		<div class="skills">
+			<div class="l1" id="l1">
+				<ul>
+					<li id="s1"></li>
+					<li id="s2"></li>
+					<li id="s3"></li>
+				</ul>
+			</div>
+	
+			<div  class="l1"id="l2">
+				<ul>
+					<li id="s4"></li>
+					<li id="s5"></li>
+					<li id="s6"></li>
+				</ul>
+			</div>
+		</div>
+	
+		<span style="font-family:'Trebuchet MS';font-size:20px;font-weight:900;color:#0f98c1;">Work Experience </span>
+		<hr class="style2_rest">
+		
+		<div id="work_exp_main">
+	
+			<div id="work_exp">
+			</div>
+	
+		</div>
+	
+	
+		<span style="font-family:'Trebuchet MS';font-size:20px;font-weight:900;color:#0f98c1;">Education </span>
+		<hr class="style2_rest">
+		<br>
+		<br>
+		<div id="education">
+	
+			<div id="e1">
+			</div>
+	
+			<div id="e2">
+			</div>
+	
+			<div id="e3">
+			</div>
+		</div>
+
+	</div>
+	</div>
+</page>
+
+<page size="A4">
+</page>
+	</body>
+	<script type="text/javascript">
+		//NAME ON TOP
+		var main=document.getElementById('main');
+		main.innerHTML=sessionStorage.getItem("fn").toUpperCase()+"<br> "+sessionStorage.getItem("ln").toUpperCase();
+		
+		//PERSONAL DETAILS JUST BELOW
+		var l1=document.getElementById('l1');
+		var l2=document.getElementById('l2');
+		var l3=document.getElementById('l3');
+		var l4=document.getElementById('l4');
+		
+		l1.innerHTML="<b>"+sessionStorage.getItem("ci")+"</b>";
+		l2.innerHTML="<b>"+sessionStorage.getItem("st")+"</b>";
+		l3.innerHTML="<b>Mobile: </b>"+sessionStorage.getItem("mp");
+		l4.innerHTML="<b>Email: </b>"+sessionStorage.getItem("email");
+		
+		//SKILLS
+		var s1=document.getElementById("s1");
+		var s2=document.getElementById("s2");
+		var s3=document.getElementById("s3");
+		var s4=document.getElementById("s4");
+		var s5=document.getElementById("s5");
+		var s6=document.getElementById("s6");
+		
+		s1.innerHTML=sessionStorage.getItem("s1");
+		s2.innerHTML=sessionStorage.getItem("s2");
+		s3.innerHTML=sessionStorage.getItem("s3");
+		s4.innerHTML=sessionStorage.getItem("s4");
+		s5.innerHTML=sessionStorage.getItem("s5");
+		s6.innerHTML=sessionStorage.getItem("s6");
+	
+		//WORK EXPERIENCE
+		var work_exp=document.getElementById("work_exp");
+		work_exp.innerHTML="<br><br>"+sessionStorage.getItem("work_exp");
+		
+		//EDUCATION
+		var education=document.getElementById('education');
+		var e1=document.getElementById('e1');
+		var e2=document.getElementById('e2');
+		var e3=document.getElementById('e3');
+		var un1=sessionStorage.getItem("un1");
+		var un2=sessionStorage.getItem("un2");
+		var un3=sessionStorage.getItem("un3");
+		var de1=sessionStorage.getItem("de1");
+		var de2=sessionStorage.getItem("de2");
+		var de3=sessionStorage.getItem("de3");
+		var fos1=sessionStorage.getItem("fos1");
+		var fos2=sessionStorage.getItem("fos2");
+		var fos3=sessionStorage.getItem("fos3");
+		var gy1=sessionStorage.getItem("gy1");
+		var gy2=sessionStorage.getItem("gy2");
+		var gy3=sessionStorage.getItem("gy3");
+		e1.innerHTML="<span style='font-size:22px;font-family:'Trebuchet MS';'> Completed "+de1+" IN :</span>"+ 
+									"<ul><li> "+fos1+"</li>"+
+									"<li> AT:"+un1+"</li>"+
+									"<li> Graduated on: "+gy1+"</li>";
+		e2.innerHTML="<span style='font-size:22px;font-family:'Trebuchet MS';'> Completed "+de2+" IN :</span>"+ 
+									"<ul><li> "+fos2+"</li>"+
+									"<li> AT:"+un2+"</li>"+
+									"<li> Graduated on: "+gy2+"</li><br>";
+		e3.innerHTML="<span style='font-size:22px;font-family:'Trebuchet MS';'> Completed "+de3+" IN :</span>"+ 
+									"<ul><li> "+fos3+"</li>"+
+									"<li> AT:"+un3+"</li>"+
+									"<li> Graduated on: "+gy3+"</li>";
+	</script>
+</html>

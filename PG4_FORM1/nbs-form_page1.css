@@ -1,0 +1,163 @@
+/* START OF NAVBAR AND FOOTER STYLING */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+body{
+	margin:0;
+	background-color:#FFFFFF;
+}
+
+.navtop{
+	height:50px;
+	width:100%;
+	background-color:black;
+	color:#FFFFFF;	
+	text-decoration:none;
+}
+.navtop ul li a{
+	text-decoration:none;
+	color:#FFFFFF;
+}
+.navmain{
+	float:left;
+}
+.navlist{
+	float:right;
+}
+
+.navtop ul li{
+	display:inline-block;
+	list-style-type:none;
+	margin-right:20px;
+}
+
+.footbottom{
+	height:50px;
+	width:100%;
+	background-color:black;
+	color:#FFFFFF;	
+	text-decoration:none;
+	line-height:50px;	
+}
+.footer-list{
+	float:right;
+}
+
+/* END OF NAVBAR AND FOOTER STYLING */
+
+
+body{
+	background-image:url("/WT_NEW/pictures/formpage1.png");
+	background-repeat:no-repeat;
+	background-position:right;
+}
+.row{
+	display:-webkit-flex;
+	display:flex;
+	padding-left:100px;
+	padding-top:30px;
+	width:800px;
+	font-size:15px;
+	font-family:"Trebuchet MS", Helvetica, sans-serif	;
+}
+
+.cols3{
+	width:300px;
+}
+.cols2{
+	width:200px;
+}
+.cols1{
+	width:100px;
+}
+
+.form-control{
+	height:25px;
+	border:1px solid #cccccc;
+	width:250px;
+	border-radius:5px;
+}
+.cols1 .form-control{
+	margin-left:70px;
+	width:100px;
+}
+
+.form-control:focus{
+	-webkit-box-shadow: 0px 0px 12px 1px rgba(47,222,235,1);
+	-moz-box-shadow: 0px 0px 12px 1px rgba(47,222,235,1);
+	box-shadow: 0px 0px 12px 1px rgba(47,222,235,1);
+}
+
+.all_s{
+	padding-left:100px;
+	padding-top:30px;
+	font-size:25px;
+	text-align:left;
+	font-family:"Trebuchet MS", Helvetica, sans-serif	;
+}
+
+#back,#submit{
+	font-size:20px;
+	color:#ffffff;
+	padding:5px auto;
+}
+
+#submit{	
+	background-color:#088c15;
+}
+
+#back{	
+	background-color:#969690;
+}
+
+
+.form-right{
+	height:200px;
+	width:200px;
+}
+
+#submit{
+  background: #153bd4;
+  cursor:pointer;
+  background-image: -webkit-linear-gradient(top, #153bd4, #1536db);
+  background-image: -moz-linear-gradient(top, #153bd4, #1536db);
+  background-image: -ms-linear-gradient(top, #153bd4, #1536db);
+  background-image: -o-linear-gradient(top, #153bd4, #1536db);
+  background-image: linear-gradient(to bottom, #153bd4, #1536db);
+  -webkit-border-radius: 11;
+  -moz-border-radius: 11;
+  border-radius: 11px;
+  font-family: "Trebuchet MS";
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  border: solid #153bd4 2px;
+  text-decoration: none;
+}
+
+.button{
+	position:relative;
+	left:1000px;
+}
+select.soflow{
+   -webkit-appearance: button;
+   -webkit-border-radius: 2px;
+   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+   -webkit-padding-end: 20px;
+   -webkit-padding-start: 2px;
+   -webkit-user-select: none;
+   background-image: url('http://i62.tinypic.com/15xvbd5.png'), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+   background-position: 97% center;
+   background-repeat: no-repeat;
+   border: 1px solid #AAA;
+   color: #555;
+   font-size: inherit;
+   margin: 2px;
+   overflow: hidden;
+   padding: 5px 10px;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   width: 300px;
+}
+
