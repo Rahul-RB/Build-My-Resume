@@ -334,7 +334,7 @@
 	
 	
 	
-<script src="/WT_NEW/PG6_FORM2/tinymce/js/tinymce/tinymce.min.js"></script>
+<script src="/WT_NEW/PG6_FORM2/editor/js/tinymce/tinymce.min.js"></script>
 <script type="text/javascript">
 		tinyMCE.init({
 		        // General options
