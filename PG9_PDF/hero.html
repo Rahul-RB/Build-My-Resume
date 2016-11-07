@@ -26,6 +26,13 @@
 				print.style.display="none";
 				pdf.style.display="none";
 				window.print();
+				window.setTimeout(testfun(),3000);
+		}
+			function testfun(){
+				var print=document.getElementById("print");
+				var pdf=document.getElementById("pdf");
+				print.style.display="block";
+				pdf.style.display="block";
 		}
 		</script>
 		<style>
@@ -114,7 +121,7 @@
 	
 	<body>
 		<input type="button" onclick="javascript:genPDF()" value="GET INACCURATE PDF"id="pdf">  
-  <input type="button" onclick="print_direct()" value="PRINT PAGE!" id="print"/>
+  <input type="button" onclick="print_direct();" value="PRINT PAGE!" id="print"/>
 	<page size="A4">
 <div id="FOR_PDF">
 	<br>

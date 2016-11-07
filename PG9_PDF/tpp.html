@@ -19,13 +19,19 @@
 						doc.save('tpp-pdf.pdf');		
 					}
 				});
-			}
-			function print_direct(){
+			}function print_direct(){
 				var print=document.getElementById("print");
 				var pdf=document.getElementById("pdf");
 				print.style.display="none";
 				pdf.style.display="none";
 				window.print();
+				window.setTimeout(testfun(),3000);
+		}
+			function testfun(){
+				var print=document.getElementById("print");
+				var pdf=document.getElementById("pdf");
+				print.style.display="block";
+				pdf.style.display="block";
 		}
 		</script>
 		<style>
