@@ -5,7 +5,7 @@
 	if(mysqli_connect_errno()){
 		die("CONNECTION FALIED". " " .mysql_connect_err());
 	}
-	$q2="CREATE TABLE form1data(fn varchar(20), ln varchar(20), sa varchar(50), ci varchar(10), st varchar(10) ,pc varchar(6), land varchar(20) ,mp varchar(10) , email varchar(50) PRIMARY KEY)";
+	$q2="CREATE TABLE form1data(fn varchar(20), ln varchar(20), sa varchar(50), ci varchar(10), st varchar(10) ,pc varchar(6), land varchar(20) ,mp varchar(10) , email varchar(50)) PRIMARY KEY";
 	$k=mysqli_query($con, $q2);
 	$fn=$_POST['fn'];
 	$ln=$_POST['ln'];
@@ -20,7 +20,8 @@
 //$p="INSERT INTO test (id,fn,ln,sa,ci,st,pc,land,mp,email) VALUES ($id,$fn,$ln,$sa,$ci,$st,$pc,$land,$mp,$email)";
 
 if (mysqli_query($con,"INSERT INTO form1data VALUES ('$fn','$ln','$sa','$ci','$st','$pc','$land','$mp','$email')" )) {
-} else {
+} 
+else {
 		die("CONNECTION LOST");
 }
 mysqli_close($con);

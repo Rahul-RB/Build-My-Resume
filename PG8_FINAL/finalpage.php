@@ -192,13 +192,13 @@
 		$work_exp=$_SESSION['work_exp'];
 -->
 <div style="display: none;">
-	<p id="fn"><?php $fn=$row['fn'];echo htmlspecialchars($fn);?></p>
-	<p id="ln"><?php $fn=$row['fn'];echo htmlspecialchars($ln);?></p>
-	<p id="ci"><?php $fn=$row['fn'];echo htmlspecialchars($ci);?></p>
-	<p id="st"><?php $fn=$row['st'];echo htmlspecialchars($st);?></p>
-	<p id="mp"><?php $fn=$row['mp'];echo htmlspecialchars($mp);?></p>
-	<p id="email"><?php $fn=$row['email'];echo htmlspecialchars($email);?></p>
-	<p id="work_exp"><?php $fn=$_SESSION['work_exp'];echo htmlspecialchars($work_exp);?></p>
+	<p id="fn"><?php echo htmlspecialchars($fn);?></p>
+	<p id="ln"><?php echo htmlspecialchars($ln);?></p>
+	<p id="ci"><?php echo htmlspecialchars($ci);?></p>
+	<p id="st"><?php echo htmlspecialchars($st);?></p>
+	<p id="mp"><?php echo htmlspecialchars($mp);?></p>
+	<p id="email"><?php echo htmlspecialchars($email);?></p>
+	<p id="work_exp"><?php echo htmlspecialchars($work_exp);?></p>
 </div>
 
 

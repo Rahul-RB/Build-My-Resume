@@ -3,6 +3,7 @@
 		$html=$_POST['work_exp'];
 		$email=$_SESSION['email'];
 		$_SESSION['work_exp']=$html;
+	
 	/*	$html = str_replace( '<ul>', "" , $html);
 		$html = str_replace( '<li>', "\201" , $html); // "\201 is the dot for unordered list"
 		$html = str_replace( '</li>', "<br>" , $html);
